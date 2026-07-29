@@ -64,9 +64,9 @@ while True:
                     
                     if produto.vender(qtd):
                         total = qtd * produto.preco
-                        print(f"✅ Compra realizada! Total: R$ {total:.2f}")
+                        print(f"Compra realizada! Total: R$ {total:.2f}")
                     else:
-                        print(f"❌ Estoque insuficiente! Temos apenas {produto.estoque} unidades.")
+                        print(f"Estoque insuficiente! Temos apenas {produto.estoque} unidades.")
                 else:
                     print("Opção inválida.")
             except ValueError:
@@ -81,7 +81,7 @@ while True:
                     produto = mercado.produtos[num]
                     qtd = int(input(f"Quantidade a adicionar ao estoque de '{produto.nome}': "))
                     produto.repor_estoque(qtd)
-                    print(f"✅ Novo estoque de {produto.nome}: {produto.estoque} unidades.")
+                    print(f"Novo estoque de {produto.nome}: {produto.estoque} unidades.")
                 else:
                     print("Opção inválida.")
             except ValueError:
